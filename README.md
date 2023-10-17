@@ -103,6 +103,11 @@ or with python requests:
 pdf_content = requests.post('http://localhost:8081/sign', files = {'file': open("../test3.pdf", "rb").read(), }, data={'visibleLine1': 'ΔΟκΙΜΗ ΤΕΣΤ', 'apikey': '123'} ).content
 ```
 
+
+## Running on Docker
+1. Build image : `docker run -p 8081:8081 signing-service`
+2. Run image `docker run -p 8080:8080 signing-service`
+
 ## Security
 
 Please notice that checking pdf files is allowed by everybody. However, for signing you need to set a **very strong api key and be very careful about it.** If somebody gets your api key he'll be able to sign *any document* he wants with your organization's signature!
