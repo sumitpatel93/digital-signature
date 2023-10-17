@@ -108,6 +108,13 @@ pdf_content = requests.post('http://localhost:8081/sign', files = {'file': open(
 1. Build image : `docker run -p 8081:8081 signing-service`
 2. Run image `docker run -p 8080:8080 signing-service`
 
+## How to build a jar file of code
+
+1. `mvn clean package`
+
+if maven is not installed on linux or mac, please install it with
+`brew install maven` or `sudo apt-get maven`
+
 ## Security
 
 Please notice that checking pdf files is allowed by everybody. However, for signing you need to set a **very strong api key and be very careful about it.** If somebody gets your api key he'll be able to sign *any document* he wants with your organization's signature!
